@@ -3,6 +3,7 @@
  int endx =0;
  int endy =150;
  int choose = (int)(Math.random()*15);
+
 void setup()
 {
   background(255,255,255);
@@ -29,7 +30,8 @@ void draw()
    }
    
    else if (choose < 5){
-    //duck
+
+//duck
     noStroke();
     fill(255,255,255);
 ellipse(250,290,150,90);
