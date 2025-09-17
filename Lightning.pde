@@ -2,7 +2,7 @@
  int startx = 0;
  int endx =0;
  int endy =150;
- int choose = (int)(Math.random()*10);
+ int choose = (int)(Math.random()*15);
 void setup()
 {
   background(255,255,255);
@@ -19,13 +19,13 @@ void draw()
    stroke(255,255,255);
   strokeWeight(5);
   noFill();
-  arc(200,200,100,100,radians(170),radians(360));
-  arc(300,200,100,100,radians(180),radians(370));
-  line(150,208,250,330);
-    line(349,208,250,330);
-    arc(200,210,20,20,radians(180), radians(360));
-     arc(300,210,20,20,radians(180), radians(360));
-     arc(250,260,20,20,radians(0), radians(180));
+  arc(200,210,100,100,radians(170),radians(360));
+  arc(300,210,100,100,radians(180),radians(370));
+  line(150,218,250,330);
+    line(349,218,250,330);
+    arc(200,220,20,20,radians(180), radians(360));
+     arc(300,220,20,20,radians(180), radians(360));
+     arc(250,270,20,20,radians(0), radians(180));
    }
    
    else if (choose < 5){
@@ -52,10 +52,8 @@ arc(270,310,120,60,radians(0),radians(45));
 arc(270,310,150,100,radians(0),radians(45));
 arc(270,310,120,60,radians(345),radians(360));
 arc(270,310,150,100,radians(325),radians(360));
-   println(choose);
    }
    
-   //
    
     //lightning
 if (mousePressed == true){
@@ -66,17 +64,18 @@ if (mousePressed == true){
  endx =0;
  endy =150;
   while(endy<=250){
-  if (choose>=5){
-    stroke((int)(Math.random()*150),0,0);
+  
+  if (choose>5){
+    stroke((int)(Math.random()*100),0,0);
     }
-    else if (choose>5){ 
-    stroke(0,0,(int)(Math.random()*100));
+    else if (choose<5){ 
+    stroke(0,0,(int)(Math.random()*150));
     }
   endx=startx + (int)(Math.random()*20-10);
 endy=starty+  (int)(Math.random()*8);
  line(startx,starty, endx,endy);
  
- if (choose>=5){
+ if (choose>5){
     stroke((int)(Math.random()*256),0,0);
     }
  else if (choose < 5){
