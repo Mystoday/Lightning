@@ -16,7 +16,7 @@ void draw()
 {
  
   //heart
-  if(choose > 5 && choose < 10){
+  if(choose > 5 && choose <= 10){
    stroke(255,255,255);
   strokeWeight(5);
   noFill();
@@ -86,7 +86,7 @@ if (mousePressed == true){
  endy =150;
   while(endy<=250){
   
-  if (choose > 5 && choose < 10){
+  if (choose > 5 && choose <= 10){
     stroke((int)(Math.random()*100),0,0);
     }
     else if (choose>10 && choose <= 15){ 
@@ -99,7 +99,7 @@ if (mousePressed == true){
 endy=starty+  (int)(Math.random()*8);
  line(startx,starty, endx,endy);
  
- if (choose>5 && choose < 10){
+ if (choose>5 && choose <= 10){
     stroke((int)(Math.random()*256),0,0);
     }
  else if (choose > 10 && choose<=15){
