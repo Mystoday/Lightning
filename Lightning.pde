@@ -3,7 +3,7 @@
  int endx =0;
  int endy =150;
  int choose = (int)(Math.random()*15);
-
+ println(choose); 
 void setup()
 {
   background(255,255,255);
@@ -16,7 +16,7 @@ void draw()
 {
  
   //heart
-  if(choose > 5){
+  if(choose > 5 && choose < 10){
    stroke(255,255,255);
   strokeWeight(5);
   noFill();
@@ -29,9 +29,8 @@ void draw()
      arc(250,270,20,20,radians(0), radians(180));
    }
    
-   else if (choose < 5){
-
-//duck
+   else if (choose > 10 && choose <= 15){
+    //duck
     noStroke();
     fill(255,255,255);
 ellipse(250,290,150,90);
@@ -56,6 +55,26 @@ arc(270,310,120,60,radians(345),radians(360));
 arc(270,310,150,100,radians(325),radians(360));
    }
    
+else if (choose <= 5){
+//bunny
+noFill();
+strokeWeight(5);
+stroke(255,255,255);
+arc(220,260,60,250,radians(180),radians(350));
+arc(280,260,60,250,radians(187),radians(360));
+ellipse(250,310,180,130);
+ellipse(220,300,30,30);
+ellipse(280,300,30,30);
+triangle(240,330, 250,340, 260,330); 
+line(250,340, 260, 350);
+line(250,340, 240, 350); 
+fill(255,255,255);
+ellipse(227,293,5,5);
+ellipse(215,308,5,5);
+ellipse(287,293,5,5);
+ellipse(275,308,5,5);
+ 
+ }
    
     //lightning
 if (mousePressed == true){
@@ -67,26 +86,32 @@ if (mousePressed == true){
  endy =150;
   while(endy<=250){
   
-  if (choose>5){
+  if (choose > 5 && choose < 10){
     stroke((int)(Math.random()*100),0,0);
     }
-    else if (choose<5){ 
-    stroke(0,0,(int)(Math.random()*150));
+    else if (choose>10 && choose <= 15){ 
+    stroke(0,0,(int)(Math.random()*100));
+    }
+    else if (choose<=5){
+    stroke(0,(int)(Math.random()*100),(int)(Math.random()*100));
     }
   endx=startx + (int)(Math.random()*20-10);
 endy=starty+  (int)(Math.random()*8);
  line(startx,starty, endx,endy);
  
- if (choose>5){
+ if (choose>5 && choose < 10){
     stroke((int)(Math.random()*256),0,0);
     }
- else if (choose < 5){
+ else if (choose > 10 && choose<=15){
  stroke(0,0,(int)(Math.random()*256));
  }
+ else if (choose<=5){
+    stroke(0,(int)(Math.random()*256),(int)(Math.random()*256));
+    }
+    
  line(startx,starty+250,endx,endy+250);
   startx=endx;
   starty=endy;
-
   }
  
 }
