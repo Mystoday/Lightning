@@ -3,12 +3,12 @@
  int endx =0;
  int endy =150;
  int choose = (int)(Math.random()*15);
- println(choose); 
+
 void setup()
 {
   background(255,255,255);
   size(500,500);
-  frameRate(20);
+  frameRate(25);
  
 }
 
