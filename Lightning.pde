@@ -1,4 +1,4 @@
- int starty = 150;
+int starty = 150;
  int startx = 0;
  int endx =0;
  int endy =150;
@@ -8,7 +8,7 @@ void setup()
 {
   background(255,255,255);
   size(500,500);
-  frameRate(25); 
+  frameRate(25);
 }
 
 void draw()
@@ -29,8 +29,8 @@ void draw()
    
    else if (choose > 10 && choose <= 15){
     //duck
-    noStroke();
-    fill(255,255,255);
+noStroke();
+fill(255,255,255);
 ellipse(250,290,150,90);
 triangle(150,250, 190,318, 205,255);
 ellipse(290,230,90,90);
@@ -51,13 +51,14 @@ arc(270,310,120,60,radians(0),radians(45));
 arc(270,310,150,100,radians(0),radians(45));
 arc(270,310,120,60,radians(345),radians(360));
 arc(270,310,150,100,radians(325),radians(360));
-   }
-
-//hat
+   
+ //hat
+ fill(255,255,255);
 ellipse(290,195,90,20);
-rect(260,145,60,30);
-rect(260,185,60,10);
-ellipse(290,145,60,8);
+rect(265,140,50,35);
+rect(265,185,50,8);
+ellipse(290,140,50,8);
+ }
    
 else if (choose <= 5){
 //bunny
@@ -69,9 +70,9 @@ arc(280,260,60,250,radians(187),radians(360));
 ellipse(250,310,180,130);
 ellipse(220,300,30,30);
 ellipse(280,300,30,30);
-triangle(240,330, 250,340, 260,330); 
+triangle(240,330, 250,340, 260,330);
 line(250,340, 260, 350);
-line(250,340, 240, 350); 
+line(250,340, 240, 350);
 fill(255,255,255);
 ellipse(227,293,5,5);
 ellipse(215,308,5,5);
@@ -89,11 +90,11 @@ if (mousePressed == true){
  endx =0;
  endy =150;
   while(endy<=250){
-  
+ 
   if (choose > 5 && choose <= 10){
     stroke((int)(Math.random()*100),0,0);
     }
-    else if (choose>10 && choose <= 15){ 
+    else if (choose>10 && choose <= 15){
     stroke(0,0,(int)(Math.random()*100));
     }
     else if (choose<=5){
@@ -113,7 +114,7 @@ if (choose>5 && choose <= 10){
  else if (choose<=5){
     stroke(0,(int)(Math.random()*256),(int)(Math.random()*256));
     }
-    
+   
  line(startx,starty+250,endx,endy+250);
   startx=endx;
   starty=endy;
