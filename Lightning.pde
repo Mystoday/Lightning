@@ -52,6 +52,10 @@ arc(270,310,150,100,radians(0),radians(45));
 arc(270,310,120,60,radians(345),radians(360));
 arc(270,310,150,100,radians(325),radians(360));
    }
+
+//hat
+ellipse(290,195,90,20);
+rect(260,145,60,50);
    
 else if (choose <= 5){
 //bunny
